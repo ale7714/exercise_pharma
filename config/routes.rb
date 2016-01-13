@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :volunteers, only: [:new, :create] do
+    get :thank_you, on: :collection
+  end
 end
